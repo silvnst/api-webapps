@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
-var port = 3000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 app.set('port', port);
 app.use(express.json());
