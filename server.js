@@ -45,7 +45,7 @@ app.get('/history', function (req, res, next) {
 
 // History - delete
 app.get('/history/clear', function (req, res, next) {
-  chatHistory = [];
+  chatHistory.length = 0;
   res.json({ message: 'History cleared' });
 });
 
