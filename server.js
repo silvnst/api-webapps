@@ -43,6 +43,12 @@ app.get('/history', function (req, res, next) {
   res.send(chatHistory);
 });
 
+// History - delete
+app.get('/history/clear', function (req, res, next) {
+  res.json({ message: 'History cleared' });
+});
+
+// History - add
 app.post('/history', function (req, res, next) {
   const chatMessage = req.body?.message;
   const nickName = req.body?.nickName;
